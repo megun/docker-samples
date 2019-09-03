@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - data1:/data1
+  fluent:
+    build: ./fluent
+    volumes:
+      - data1:/data1
+volumes:
+  data1:
